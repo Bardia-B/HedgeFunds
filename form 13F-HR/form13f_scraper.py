@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import time
 from bs4 import BeautifulSoup
@@ -8,9 +8,38 @@ import warnings
 import xml.etree.ElementTree as ET
 import re
 
-def process_form13f_filings(cik, start_date=None, end_date=None):
+def process_multiple_funds(cik_list):
+    """Process multiple funds' 13F filings"""
+    # Calculate date 7 years ago from today
+    seven_years_ago = (datetime.now() - timedelta(days=7*365)).strftime('%Y-%m-%d')
+    
+    for cik in cik_list:
+        print(f"\nProcessing fund with CIK: {cik}")
+        try:
+            # Process each fund's filings
+            df = process_form13f_filings(
+                cik=cik,
+                start_date=seven_years_ago,
+                base_dir=f"filings_13f_{cik}"
+            )
+            
+            if df is not None:
+                # Save to fund-specific CSV
+                csv_path = f"form13f_{cik}.csv"
+                df.to_csv(csv_path, index=False)
+                print(f"Data saved to {csv_path}")
+                
+            time.sleep(0.1)  # Respect SEC rate limits
+            
+        except Exception as e:
+            print(f"Error processing CIK {cik}: {e}")
+            continue
+
+def process_form13f_filings(cik, start_date=None, base_dir=None):
     """Process Form 13F filings for a given CIK"""
-    base_dir = f"filings_13f_{cik}"
+    if base_dir is None:
+        base_dir = f"filings_13f_{cik}"
+    
     os.makedirs(base_dir, exist_ok=True)
     
     url = f"https://data.sec.gov/submissions/CIK{cik}.json"
@@ -26,19 +55,17 @@ def process_form13f_filings(cik, start_date=None, end_date=None):
         # Convert filingDate to datetime
         recent_filings['filingDate'] = pd.to_datetime(recent_filings['filingDate'])
         
-        # Filter by date range if provided
+        # Filter by date range
         if start_date:
             start_date = pd.to_datetime(start_date)
             recent_filings = recent_filings[recent_filings['filingDate'] >= start_date]
-        if end_date:
-            end_date = pd.to_datetime(end_date)
-            recent_filings = recent_filings[recent_filings['filingDate'] <= end_date]
         
         # Filter for Form 13F-HR
         filtered_filings = recent_filings[recent_filings['form'].str.contains('13F-HR', na=False)]
         
-        # Save filing metadata
-        filtered_filings.to_csv(f"{base_dir}/form13f_metadata.csv", index=False)
+        # Save filing metadata with CIK
+        filtered_filings['cik'] = cik
+        filtered_filings.to_csv(f"{base_dir}/form13f_metadata_{cik}.csv", index=False)
         
         all_holdings = []
         
@@ -78,7 +105,8 @@ def process_form13f_filings(cik, start_date=None, end_date=None):
                         'VOTING AUTHORITY SOLE': info_table.find('votingAuthority').find('Sole').text.strip(),
                         'VOTING AUTHORITY SHARED': info_table.find('votingAuthority').find('Shared').text.strip(),
                         'VOTING AUTHORITY NONE': info_table.find('votingAuthority').find('None').text.strip(),
-                        'Filing Date': filing['filingDate'].strftime('%Y-%m-%d')
+                        'Filing Date': filing['filingDate'].strftime('%Y-%m-%d'),
+                        'cik': cik
                     }
                     all_holdings.append(holding)
                 
@@ -281,17 +309,10 @@ def scrape_form13f_tables(base_dir):
         return pd.DataFrame()
 
 if __name__ == "__main__":
-    cik = "0001291422"  # Replace with your CIK
-    base_dir = f"filings_13f_{cik}"
+    # Example usage with multiple CIKs
+    cik_list = [
+        "0001291422",  # Example CIK
+        # Add more CIKs here
+    ]
     
-    # First download the files
-    download_form13f_files(cik, base_dir)
-    
-    # Then scrape the data
-    try:
-        holdings_df = scrape_form13f_tables(base_dir)
-        if not holdings_df.empty:
-            print("\nSample of extracted data:")
-            print(holdings_df.head())
-    except Exception as e:
-        print(f"Error running script: {str(e)}") 
+    process_multiple_funds(cik_list) 
