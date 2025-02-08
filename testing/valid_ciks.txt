@@ -1,0 +1,193 @@
+Citadel Investment Group	0001377813
+Bridgewater Associates	0001856996
+Mariner Investment Group LLC	0001096978
+Millennium Capital Partners	0001426817
+Ares Management	0001934800
+Balyasny Asset Management	0001218710
+AQR Capital Management	0001633376
+Point72 Asset Management	0001603466
+Rokos Capital Management	0001827377
+DE Shaw	0001439046
+Willis Towers Watson	0001734648
+Tiger Global Management LLC	0001167483
+Garda Capital	0001666905
+Renaissance Technologies	0001037389
+Capula Investment Management LLP	0001351450
+Fortress Investment Group	0001380393
+Goldman Sachs Asset Management	0001408886
+Exoduspoint Capital Management, LP	0001736225
+Two Sigma Investments	0001179392
+Cerberus Capital Management	0002027951
+Squarepoint Ops	0001642575
+Angelo Gordon & Co.	0000860662
+Coatue Management	0001135730
+Hillhouse Capital	0001762304
+Viking Global Investors	0001103804
+Brevan Howard Asset Management	0001415453
+Select Equity	0001344289
+Adage Capital Management	0001535978
+III Capital	0001783139
+Och-Ziff Capital Management	0001403256
+Sculptor Capital Management	0001403256
+GoldenTree Asset Management	0001717916
+Lighthouse Investment Partners	0001412308
+Bracebridge Capital	0001426486
+Element Capital Management	0001535630
+Davidson Kempner Capital Management	0000937617
+Farallon Capital Management	0000940315
+Alphadyne Asset Management	0001535943
+Oaktree Capital Management	0001995474
+Symmetry Investments	0001691919
+Lone Pine Capital	0001061165
+Apollo Capital	0001278752
+Anchorage Capital Group	0001300714
+Lansdowne Partners	0001608485
+Baupost Group	0001738693
+Brigade Capital Management	0001695885
+Kayne Anderson Capital Advisors	0000949615
+Magnetar Capital	0001731759
+Marshall Wace	0001323910
+Polar Asset Management Partners	0001326389
+Holocene Advisors	0001702954
+Cheyne Capital	0001426669
+Moore Capital Management	0000924178
+Third Point LLC	0001040273
+Benefit Street Partners	0001524542
+Voloridge Investment Management	0001556921
+Caxton Associates	0000872573
+Marathon Asset Management	0001040592
+Man Group	0001637460
+Shenkman Capital Management	0001275228
+King Street Capital Management	0001455074
+Alkeon Capital Management	0001230239
+Egerton Capital	0001581811
+Lyxor Asset Management	0001710618
+Alcentra	0001622585
+TIG Advisors	0001358253
+Varde Partners	0001054846
+LaSalle Investment Management	0001645764
+Whale Rock Capital Management	0001387322
+Silver Point Capital	0001169161
+BTG Pactual	0001569595
+Hudson Bay Capital Management	0002035624
+Crestline Investors	0001626596
+Strategic Value Partners	0001301912
+Arrowstreet Capital	0001764258
+Barings	0001978559
+Appaloosa Management	0001006438
+Beach Point Capital Management	0001453885
+BFAM Partners	0001639101
+Grantham, Mayo, Van Otterloo & Co.	0001352662
+CarVal Investors	0001963316
+Parallax Fund	0001178154
+Altimeter Capital	0001825200
+Canyon Partners	0000846350
+Algebris Investments	0001426665
+Sprott Asset Management	0001277006
+OrbiMed Advisors	0001968251
+Pershing Square Capital Management	0001336528
+Perella Weinberg Partners	0001777835
+Pharo Management	0001506210
+Neuberger Berman	0001821339
+Rock Creek	0001628075
+Cevian Capital	0001365341
+Pacific Alternative Asset Management	0001258185
+Waterfall Asset Management	0001570717
+LMR Partners	0002034017
+Onex Credit Partners	0001859518
+Rockpoint Group	0001267073
+Knighthead Capital Management, LLC	0001512397
+Bayview Asset Management	0001767366
+Commonfund Capital	0001627354
+Graham Capital Management	0001315421
+BlueMountain Capital	0001427430
+Lazard Alternatives	0001388970
+Laurion Capital Management	0001390202
+Soroban Capital Partners	0001838121
+Woodline Partners	0001784547
+Diameter Capital Partners	0001727012
+ValueAct Capital	0001759807
+MSD Capital	0001105497
+Paloma Partners	0001633870
+PDT Partners	0001895526
+Maverick Capital	0000934639
+Samlyn Capital	0001421097
+Platinum Asset Management	0001256071
+Janus Henderson	0002034032
+Napier Park Global Capital	0001595124
+Luxor Capital Group	0001316580
+Aristeia Capital	0001080171
+Tennenbaum Capital Partners	0001169553
+Taconic Capital Advisors	0001561248
+Alyeska Investment Group	0001453072
+Abrams Capital	0001442184
+Wolverine Asset Management	0001279891
+Whitebox Advisors	0001257391
+Eminence Capital	0001107310
+Ellington Management Group	0001098490
+Aviva Investors	0001817620
+Monarch Alternative Capital	0001281084
+K2 Advisors	0001303092
+Corbin Capital Partners	0001929448
+ABC Arbitrage	0001593032
+Pentwater Capital Management	0001425851
+HG Vora Capital Management	0001525362
+Saba Capital	0001973511
+ArcLight Capital Partners	0001502945
+Redwood Capital Management	0001737513
+CSOP Asset Management	0001618006
+400 Capital Management LLC	0001909739
+Panagora	0001458658
+Senator Investment Group	0001443689
+BlueCrest Capital Management	0001363542
+Libra Advisors	0001005557
+Adamas Partners	0001132868
+Rockwood Capital	0001878046
+Candlestick Capital	0001789779
+Weiss Asset Management	0001298983
+Highbridge Capital Management	0000919185
+Lombard Odier Darier Hentsch & Cie	0001106185
+Tilden Park Capital Management	0001673553
+Amber Capital Investment Management	0001679025
+Astenbeck Capital Management	0001489226
+Oak Hill Advisors	0001930218
+Atalaya Capital Management LP	0001812285
+Axonic Capital LLC	0001630783
+Gordian Capital	0001389595
+Capital Fund Management	0001323645
+HPS Investment Partners	0001837864
+York Capital Management	0001480532
+Magnitude Capital	0001556278
+Kopernik Global Investors	0001599814
+Bardin Hill Investment Partners	0001633312
+Sachem Head Capital Management	0001582090
+Investec Asset Management	0001491998
+SPX Capital	0001894749
+Deer Park Road Corp	0001702490
+Empyrean Capital Partners	0001335796
+Winton Capital Management	0001456098
+Gramercy	0001770660
+Oxford Asset Management	0001438284
+Segantii Capital Management	0001766787
+PointState Capital	0001509842
+HighVista Strategies	0001335325
+Stone Milliner Asset Management	0001614505
+Avanda Investment Management	0001650258
+Fir Tree Partners	0000939318
+Contrarian Capital Management	0001050417
+Cantab Capital Partners	0001597858
+Odey Asset Management	0001512596
+GMT Capital	0001106191
+Indus Capital Partners	0001350879
+Evanston Capital Management	0001508024
+Greywolf Capital Management	0001304096
+Guggenheim Capital Markets	0001009953
+Kensico Capital Management	0001113000
+Aspect Capital	0001393234
+57 Stars	0001566681
+Solus Alternative Asset Management	0001407737
+Ward Ferry Management	0001632574
+MKP Capital Management	0001534949
+Engineers Gate Manager	0001620220
+Highclere International Investors	0001598032
+Rimrock Capital Management	0001766625
