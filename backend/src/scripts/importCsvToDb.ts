@@ -51,19 +51,26 @@ function extractDateFromFilingId(filingId: string): string {
 }
 
 async function findMostRecentHoldingsFile(): Promise<string | null> {
-    const downloadsPath = path.join(os.homedir(), 'Downloads')
-    const files = fs.readdirSync(downloadsPath)
+    // Get the current working directory
+    const currentDir = process.cwd()
+    const files = fs.readdirSync(currentDir)
     
     const holdingsFiles = files
         .filter(file => file.startsWith('all_13f_holdings_') && file.endsWith('.csv'))
         .map(file => ({
             name: file,
-            path: path.join(downloadsPath, file),
-            time: fs.statSync(path.join(downloadsPath, file)).mtime.getTime()
+            path: path.join(currentDir, file),
+            time: fs.statSync(path.join(currentDir, file)).mtime.getTime()
         }))
         .sort((a, b) => b.time - a.time)
 
-    return holdingsFiles.length > 0 ? holdingsFiles[0].path : null
+    if (holdingsFiles.length === 0) {
+        console.error('No holdings files found in current directory:', currentDir)
+        return null
+    }
+
+    console.log('Found holdings files:', holdingsFiles.map(f => f.name).join(', '))
+    return holdingsFiles[0].path
 }
 
 async function importCsvData() {
@@ -71,17 +78,22 @@ async function importCsvData() {
     
     const holdingsFile = await findMostRecentHoldingsFile()
     if (!holdingsFile) {
-        console.error('No holdings file found in Downloads folder')
+        console.error('No holdings file found in current directory')
         return
     }
     
     console.log(`Found holdings file: ${holdingsFile}`)
+    console.log('Attempting to connect with:', {
+        host: 'localhost',
+        user: 'root',
+        database: '13f_filings'
+    })
 
     const connection = await createConnection({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME
+        host: 'localhost',
+        user: 'root',
+        password: '1384',
+        database: '13f_filings'
     })
 
     try {
